@@ -11,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import pl.edu.wszib.springwprowadzenie.configuration.Zoo;
+import pl.edu.wszib.springwprowadzenie.configuration.myProperties;
 import pl.edu.wszib.springwprowadzenie.model.Samochod;
 import pl.edu.wszib.springwprowadzenie.model.Silnik;
 import pl.edu.wszib.springwprowadzenie.model.zoo.JunglaZWoda;
@@ -26,7 +27,8 @@ public class SpringWprowadzenieApplication implements CommandLineRunner, Applica
 //    @Qualifier("silnik2")
     private Silnik silnik;
 
-
+    @Autowired
+    private myProperties myProperties;
 
     @Autowired
     private Samochod samochod;
@@ -39,6 +41,11 @@ public class SpringWprowadzenieApplication implements CommandLineRunner, Applica
     samochod.odpal();
     silnik.zepsuj();
     samochod.odpal();
+        System.out.println(myProperties.getPassword());
+        System.out.println(myProperties.getUsername());
+        System.out.println(myProperties.getUrl());
+        System.out.println(myProperties.getDodatkowe().getPierwszy());
+        System.out.println(myProperties.getDodatkowe().getDrugi());
 
     MyPrototype.getPrototype();
     }
