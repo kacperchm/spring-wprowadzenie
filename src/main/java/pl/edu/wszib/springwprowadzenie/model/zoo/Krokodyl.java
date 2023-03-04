@@ -1,5 +1,7 @@
 package pl.edu.wszib.springwprowadzenie.model.zoo;
 
+import org.springframework.stereotype.Component;
+
 public class Krokodyl implements Zwierze{
 
     @Override

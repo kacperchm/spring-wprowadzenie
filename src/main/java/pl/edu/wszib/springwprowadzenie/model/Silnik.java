@@ -1,7 +1,14 @@
 package pl.edu.wszib.springwprowadzenie.model;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
 import java.util.UUID;
 
+import static org.springframework.beans.factory.config.BeanDefinition.SCOPE_SINGLETON;
+
+@Component
+@Scope(SCOPE_SINGLETON)
 public class Silnik {
 
     private String id;

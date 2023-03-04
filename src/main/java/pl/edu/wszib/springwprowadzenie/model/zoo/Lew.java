@@ -1,5 +1,7 @@
 package pl.edu.wszib.springwprowadzenie.model.zoo;
 
+import org.springframework.stereotype.Component;
+
 public class Lew implements Zwierze{
 
     @Override
